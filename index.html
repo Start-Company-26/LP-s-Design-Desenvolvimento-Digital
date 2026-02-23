@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Design & Desenvolvimento Digital</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #0f0f0f; color: #f5f5f5; scroll-behavior: smooth; }
+    .serif { font-family: 'Playfair Display', serif; }
+    .gradient-text { background: linear-gradient(90deg, #c084fc, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .card-glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+  </style>
+</head>
+<body class="min-h-screen">
+
+  <section class="min-h-screen flex items-center justify-center text-center px-6">
+    <div>
+      <h1 class="serif text-5xl md:text-7xl font-light tracking-wide leading-tight mb-6">
+        DESIGN QUE <span class="gradient-text">CONVERTE</span><br> Sem complicação.
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-400 mb-10 max-w-3xl mx-auto">
+        LANDING PAGES RÁPIDAS E ACESSÍVEIS<br>
+        A PARTIR DE <strong class="text-white">R$ 159,90</strong>
+      </p>
+      <div class="flex flex-col md:flex-row gap-4 justify-center">
+        <a href="#pacotes" class="inline-block bg-white text-black font-semibold text-lg px-10 py-5 rounded-full hover:scale-105 transition">
+          VER PREÇOS
+        </a>
+        <a href="https://wa.me/55SEUNUMERO?text=Olá!%20Vi%20seu%20portfolio%20e%20quero%20uma%20lp." 
+           class="inline-block bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-semibold text-lg px-10 py-5 rounded-full hover:scale-105 transition">
+          FALE CONOSCO →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 px-6 bg-black/40">
+    <div class="max-w-5xl mx-auto text-center">
+    
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="p-8 card-glass rounded-2xl hover:border-purple-500 transition">
+          <h3 class="text-2xl font-semibold mb-4">DESIGN ESTRATÉGICO</h3>
+          <p class="text-gray-400">Focado em converter visitantes em clientes reais para o seu negócio.</p>
+        </div>
+        <div class="p-8 card-glass rounded-2xl hover:border-purple-500 transition">
+          <h3 class="text-2xl font-semibold mb-4">CÓDIGO LIMPO ELITE</h3>
+          <p class="text-gray-400">HTML/JS/TailWind. Leve, rápido e seguro.</p>
+        </div>
+        <div class="p-8 card-glass rounded-2xl hover:border-purple-500 transition">
+          <h3 class="text-2xl font-semibold mb-4">SUPORTE REAL</h3>
+          <p class="text-gray-400">30 DIAS de garantia para bugs e Briefing 100% GRATUITO.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio" class="py-24 px-6">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="serif text-4xl md:text-5xl mb-12">PORTFÓLIO</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="group relative overflow-hidden rounded-2xl aspect-video bg-gradient-to-br from-green-900 to-emerald-700 flex flex-col items-center justify-center p-6 transition hover:scale-[1.02]">
+          <h4 class="text-2xl font-bold mb-2">SaaSFlow</h4>
+          <p class="text-sm opacity-80">Gestão Automática para Pequenos Empreendedores</p>
+        </div>
+        <div class="group relative overflow-hidden rounded-2xl aspect-video bg-gradient-to-br from-zinc-800 to-black border border-white/10 flex flex-col items-center justify-center p-6 transition hover:scale-[1.02]">
+          <h4 class="text-2xl font-bold mb-2 italic serif text-zinc-300">AMYGRAFIA</h4>
+          <p class="text-sm opacity-80">Fotografia & Roteiros </p>
+        </div>
+        <div class="group relative overflow-hidden rounded-2xl aspect-video bg-gradient-to-br from-yellow-500 to-orange-600 flex flex-col items-center justify-center p-6 transition hover:scale-[1.02] text-black">
+          <h4 class="text-2xl font-bold mb-2">PARA ARTISTAS</h4>
+          <p class="text-sm font-bold opacity-90">Venda de Ingressos & Eventos </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pacotes" class="py-24 px-6 bg-black/40">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-8 bg-gray-900/50 rounded-2xl border border-gray-800 transition">
+          <h3 class="text-xl font-bold mb-2">BÁSICO</h3>
+          <p class="text-4xl font-bold text-purple-400 mb-6">R$ 159,90</p>
+          <ul class="space-y-3 text-gray-400 text-sm">
+            <li>✓ Landing Page Essencial</li>
+            <li>✓ Design Responsivo</li>
+            <li>✓ Entrega em 5 dias</li>
+          </ul>
+        </div>
+        <div class="p-8 bg-gradient-to-b from-purple-900/30 to-transparent rounded-2xl border border-purple-600 relative scale-105 shadow-2xl">
+          <span class="absolute -top-3 right-6 bg-purple-600 text-white px-4 py-1 rounded-full text-xs font-bold uppercase">Mais Popular</span>
+          <h3 class="text-xl font-bold mb-2 text-white">PROFISSIONAL</h3>
+          <p class="text-4xl font-bold text-purple-400 mb-6">R$ 299,90</p>
+          <ul class="space-y-3 text-gray-200 text-sm">
+            <li>✓ Design Exclusivo UX/UI</li>
+            <li>✓ Formulário de Orçamento </li>
+            <li>✓ Suporte por 30 dias</li>
+          </ul>
+        </div>
+        <div class="p-8 bg-gray-900/50 rounded-2xl border border-gray-800 transition">
+          <h3 class="text-xl font-bold mb-2">AVANÇADO</h3>
+          <p class="text-4xl font-bold text-purple-400 mb-6">R$ 499,90</p>
+          <ul class="space-y-3 text-gray-400 text-sm">
+            <li>✓ Checkout & Pagamentos</li>
+            <li>✓ Copy Estratégica</li>
+            <li>✓ Pixel de Rastreio</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-32 px-6 text-center">
+    <h2 class="serif text-5xl md:text-6xl mb-8">PRONTO?</h2>
+    <a href="https://wa.me/55SEUNUMERO?text=Quero%20iniciar%20meu%20projeto." 
+       class="inline-block bg-purple-600 text-white font-bold text-xl px-16 py-8 rounded-full hover:scale-105 transition">
+       BRIEFING GRÁTIS →
+    </a>
+  </section>
+
+  <footer class="py-12 text-center text-gray-600 border-t border-gray-900">
+    © 2026  · Design & Desenvolvimento Digital
+  </footer>
+</body>
+</html>
