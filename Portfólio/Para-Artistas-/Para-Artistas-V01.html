@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turnê 2026 - Nome da Cantora</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #0a0a0a;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* Cabeçalho */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            background-color: rgba(10, 10, 10, 0.95);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #FFD700;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #FFD700;
+        }
+
+        .cta-header {
+            background-color: #FFD700;
+            color: #0a0a0a !important;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+        }
+
+        .cta-header:hover {
+            background-color: #ffed4a;
+            color: #0a0a0a !important;
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=1200') center/cover;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            margin-top: 80px;
+        }
+
+        .hero-content {
+            width: 100%;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+
+        .hero h1 span {
+            color: #FFD700;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .countdown-item {
+            background: rgba(255, 215, 0, 0.1);
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            border: 1px solid #FFD700;
+        }
+
+        .countdown-item span {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #FFD700;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 3rem;
+            background-color: #FFD700;
+            color: #0a0a0a;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.2rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(255, 215, 0, 0.4);
+        }
+
+        /* Seções gerais */
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title span {
+            color: #FFD700;
+        }
+
+        /* Sobre */
+        .sobre-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .video-placeholder {
+            background: linear-gradient(135deg, #FFD700 0%, #b8860b 100%);
+            height: 300px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: #0a0a0a;
+        }
+
+        /* Cards de shows */
+        .shows-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .show-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .show-card:hover {
+            transform: translateY(-5px);
+            border-color: #FFD700;
+        }
+
+        .show-date {
+            color: #FFD700;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .show-city {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .show-venue {
+            color: #ccc;
+            margin-bottom: 1rem;
+        }
+
+        .show-status {
+            display: inline-block;
+            background: rgba(255, 215, 0, 0.2);
+            color: #FFD700;
+            padding: 0.3rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            margin: 1rem 0;
+        }
+
+        .btn-small {
+            display: inline-block;
+            padding: 0.5rem 2rem;
+            background-color: #FFD700;
+            color: #0a0a0a;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            width: 100%;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Cards de ingressos */
+        .tickets-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .ticket-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            position: relative;
+        }
+
+        .ticket-card.promo {
+            border: 2px solid #FFD700;
+            transform: scale(1.05);
+        }
+
+        .promo-badge {
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background: #FFD700;
+            color: #0a0a0a;
+            padding: 0.3rem 1rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .ticket-type {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .ticket-price {
+            font-size: 2.5rem;
+            color: #FFD700;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .ticket-benefits {
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        .ticket-benefits li {
+            margin: 0.5rem 0;
+            color: #ccc;
+        }
+
+        /* Depoimentos */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            margin: 1rem 0;
+            color: #ddd;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #FFD700, #b8860b);
+        }
+
+        /* Newsletter */
+        .newsletter {
+            text-align: center;
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(0, 0, 0, 0));
+            border-radius: 10px;
+            padding: 3rem;
+        }
+
+        .newsletter-form {
+            display: flex;
+            max-width: 500px;
+            margin: 2rem auto 0;
+            gap: 1rem;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 1rem;
+            border: none;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+        }
+
+        .newsletter-form input::placeholder {
+            color: #ccc;
+        }
+
+        .newsletter-form button {
+            padding: 1rem 2rem;
+            background: #FFD700;
+            color: #0a0a0a;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #050505;
+            padding: 3rem 5% 1rem;
+            border-top: 1px solid rgba(255, 215, 0, 0.3);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 215, 0, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FFD700;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .social-icon:hover {
+            background: #FFD700;
+            color: #0a0a0a;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 215, 0, 0.1);
+            color: #888;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header {
+                padding: 1rem;
+                flex-wrap: wrap;
+            }
+
+            nav {
+                order: 3;
+                width: 100%;
+                margin-top: 1rem;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .countdown {
+                gap: 0.5rem;
+                flex-wrap: wrap;
+            }
+
+            .countdown-item {
+                padding: 0.5rem 1rem;
+            }
+
+            .countdown-item span {
+                font-size: 1.5rem;
+            }
+
+            .sobre-content {
+                grid-template-columns: 1fr;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .ticket-card.promo {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">NOME DA CANTORA</div>
+        <nav>
+            <a href="#home">Início</a>
+            <a href="#shows">Datas</a>
+            <a href="#tickets">Ingressos</a>
+            <a href="#contact">Contato</a>
+            <a href="#comprar" class="cta-header">COMPRAR INGRESSO</a>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>TURNÊ <span>2026</span></h1>
+            <p>Uma noite inesquecível espera por você</p>
+            
+            <div class="countdown">
+                <div class="countdown-item">
+                    <span>15</span>
+                    <p>dias</p>
+                </div>
+                <div class="countdown-item">
+                    <span>08</span>
+                    <p>horas</p>
+                </div>
+                <div class="countdown-item">
+                    <span>24</span>
+                    <p>minutos</p>
+                </div>
+                <div class="countdown-item">
+                    <span>36</span>
+                    <p>segundos</p>
+                </div>
+            </div>
+
+            <a href="#tickets" class="btn">COMPRAR AGORA</a>
+        </div>
+    </section>
+
+    <section id="sobre" class="container">
+        <h2 class="section-title">SOBRE A <span>TURNÊ</span></h2>
+        <div class="sobre-content">
+            <div>
+                <p style="margin-bottom: 1rem;">[Nome] sobe aos palcos para apresentar seu novo álbum [Álbum] com uma produção inédita. Uma experiência única para os fãs, com cenografia imersiva, setlist especial e participações surpresa.</p>
+                <p>Prepare-se para uma noite de música, emoção e conexão. Os ingressos estão limitados!</p>
+            </div>
+            <div class="video-placeholder">
+                ▶️ TEASER DO SHOW
+            </div>
+        </div>
+    </section>
+
+    <section id="shows" class="container">
+        <h2 class="section-title">DATAS E <span>LOCAIS</span></h2>
+        <div class="shows-grid">
+            <div class="show-card">
+                <div class="show-date">15 de maio de 2026</div>
+                <div class="show-city">São Paulo, SP</div>
+                <div class="show-venue">Audio Club</div>
+                <div class="show-status">⚡ Últimos ingressos</div>
+                <a href="#" class="btn-small">COMPRAR</a>
+            </div>
+
+            <div class="show-card">
+                <div class="show-date">22 de maio de 2026</div>
+                <div class="show-city">Rio de Janeiro, RJ</div>
+                <div class="show-venue">Fundição Progresso</div>
+                <div class="show-status">🎫 Lote 3</div>
+                <a href="#" class="btn-small">COMPRAR</a>
+            </div>
+
+            <div class="show-card">
+                <div class="show-date">29 de maio de 2026</div>
+                <div class="show-city">Belo Horizonte, MG</div>
+                <div class="show-venue">Sala Minas Gerais</div>
+                <div class="show-status">🎫 Lote 2</div>
+                <a href="#" class="btn-small">COMPRAR</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="tickets" class="container">
+        <h2 class="section-title">ESCOLHA SEU <span>INGRESSO</span></h2>
+        <div class="tickets-grid">
+            <div class="ticket-card">
+                <div class="ticket-type">Pista</div>
+                <div class="ticket-price">R$ 120</div>
+                <ul class="ticket-benefits">
+                    <li>✓ Acesso à pista</li>
+                    <li>✓ Meia entrada</li>
+                    <li>✓ 1h de open bar</li>
+                </ul>
+                <a href="#" class="btn-small">COMPRAR</a>
+            </div>
+
+            <div class="ticket-card promo">
+                <div class="promo-badge">PROMOÇÃO</div>
+                <div class="ticket-type">Pista Premium</div>
+                <div class="ticket-price">R$ 200</div>
+                <ul class="ticket-benefits">
+                    <li>✓ Área VIP exclusiva</li>
+                    <li>✓ Open bar completo</li>
+                    <li>✓ Meet & greet</li>
+                    <li>✓ Estacionamento</li>
+                </ul>
+                <a href="#" class="btn-small">COMPRAR</a>
+            </div>
+
+            <div class="ticket-card">
+                <div class="ticket-type">Camarote</div>
+                <div class="ticket-price">R$ 350</div>
+                <ul class="ticket-benefits">
+                    <li>✓ Vista privilegiada</li>
+                    <li>✓ Open bar premium</li>
+                    <li>✓ Acesso ao backstage</li>
+                    <li>✓ Camarote climatizado</li>
+                </ul>
+                <a href="#" class="btn-small">COMPRAR</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="depoimentos" class="container">
+        <h2 class="section-title">O QUE ESTÃO <span>FALANDO</span></h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <p>"Melhor show da vida! Energia incrível, produção impecável. Não vejo a hora de repetir essa experiência."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar"></div>
+                    <div>
+                        <strong>@ana_clara</strong>
+                        <p style="color: #FFD700; font-size: 0.9rem;">★★★</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <p>"Voz impressionante ao vivo! Superou todas as expectativas. Recomendo a todos os fãs."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar"></div>
+                    <div>
+                        <strong>@joaopedro</strong>
+                        <p style="color: #FFD700; font-size: 0.9rem;">★★★</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <p>"Estrutura incrível, organização perfeita. Com certeza irei em todos os shows da turnê!"</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar"></div>
+                    <div>
+                        <strong>@maria_eduarda</strong>
+                        <p style="color: #FFD700; font-size: 0.9rem;">★★★</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="newsletter">
+            <h3 style="font-size: 2rem; margin-bottom: 1rem;">FIQUE POR DENTRO</h3>
+            <p>Receba novidades sobre a turnê e lançamentos em primeira mão</p>
+            <div class="newsletter-form">
+                <input type="email" placeholder="Seu melhor e-mail">
+                <button>QUERO NOVIDADES</button>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div>
+                <h4 style="color: #FFD700; margin-bottom: 1rem;">NOME DA CANTORA</h4>
+                <p>© 2026 Todos os direitos reservados</p>
+            </div>
+            <div>
+                <h4 style="color: #FFD700; margin-bottom: 1rem;">REDES SOCIAIS</h4>
+                <div class="social-links">
+                    <a href="#" class="social-icon">📷</a>
+                    <a href="#" class="social-icon">🎵</a>
+                    <a href="#" class="social-icon">▶️</a>
+                    <a href="#" class="social-icon">🎧</a>
+                </div>
+            </div>
+            <div>
+                <h4 style="color: #FFD700; margin-bottom: 1rem;">LINKS RÁPIDOS</h4>
+                <p><a href="#" style="color: #ccc; text-decoration: none;">Política de privacidade</a></p>
+                <p><a href="#" style="color: #ccc; text-decoration: none;">Termos de uso</a></p>
+                <p><a href="#" style="color: #ccc; text-decoration: none;">Contato para imprensa</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Produzido por Amygrafia - Design & Desenvolvimento Digital</p>
+        </div>
+    </footer>
+</body>
+</html>
