@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaaSFlow | Tecnologia de Impacto</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap');
+        
+        body { 
+            background-color: #050505; 
+            color: #ffffff; 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            scroll-behavior: smooth;
+            font-size: 1.25rem; /* Base escalável */
+        }
+
+        h1 { font-size: 5rem; font-weight: 800; line-height: 1.1; letter-spacing: -2px; }
+        h2 { font-size: 3.75rem; font-weight: 800; line-height: 1.2; }
+        h3 { font-size: 2.5rem; font-weight: 700; }
+        
+        p { font-size: 1.625rem; color: #d1d1d6; line-height: 1.6; }
+        .label-text { font-size: 1.375rem; font-weight: 700; text-transform: uppercase; color: #10b981; }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.8125rem; }
+            h2 { font-size: 2.375rem; }
+            h3 { font-size: 1.875rem; }
+            p { font-size: 1.375rem; }
+            body { font-size: 1.125rem; }
+            .grid { grid-template-columns: 1fr !important; } /* Responsividade */
+        }
+
+        .gradient-text { 
+            background: linear-gradient(90deg, #10b981, #3b82f6); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
+
+        .card-biz { 
+            background: #0f0f0f; 
+            border: 4px solid #1a1a1a; 
+            padding: 3.125rem;
+            border-radius: 2.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .card-biz:hover { 
+            border-color: #10b981; 
+            transform: scale(1.02);
+            box-shadow: 0 1.875rem 3.75rem rgba(16, 185, 129, 0.2);
+        }
+
+        .btn-massive {
+            font-size: 1.5rem;
+            font-weight: 800;
+            padding: 1.875rem 3.75rem;
+            border-radius: 1.5625rem;
+            text-align: center;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="flex justify-between items-center p-10 max-w-7xl mx-auto">
+        <div class="text-4xl font-black tracking-tighter uppercase">SaaS<span class="text-emerald-500">Flow</span></div>
+        <a href="#contato" class="bg-emerald-500 text-white px-10 py-5 rounded-3xl font-bold text-2xl hover:bg-emerald-400 transition shadow-lg" aria-label="Iniciar projeto">
+            INICIAR
+        </a>
+    </nav>
+
+    <header class="text-center max-w-6xl mx-auto px-6 py-20">
+        <h1 class="mb-12">
+            Tecnologia de Gigante para o <br>
+            <span class="gradient-text">Pequeno Empreendedor.</span>
+        </h1>
+        <p class="mb-16 max-w-4xl mx-auto">
+            Sistemas inteligentes que organizam sua agenda e suas vendas de forma automática. 
+            Sem complicação, direto ao ponto e focado no seu bolso.
+        </p>
+        <div class="flex flex-col md:flex-row justify-center gap-8">
+            <a href="#portfolio" class="btn-massive bg-white text-black hover:bg-emerald-500 hover:text-white" aria-label="Ver modelos prontos">
+                VER MODELOS PRONTOS
+            </a>
+            <a href="#sobre" class="btn-massive border-4 border-white/20 hover:bg-white/5" aria-label="Nossa missão">
+                NOSSA MISSÃO
+            </a>
+        </div>
+    </header>
+
+    <section id="sobre" class="bg-neutral-900/40 py-32 px-6">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-24 items-center">
+            <div class="space-y-12">
+                <h2 class="text-emerald-500">Sua dedicação merece <br>ferramentas de elite.</h2>
+                <p>
+                    Softwares inteligentes não devem ser privilégio de grandes empresas. Criamos soluções acessíveis para você focar no que importa: crescer seu negócio.
+                </p>
+                <div class="space-y-8">
+                    <div class="flex items-center gap-6">
+                        <i class="fa-solid fa-calendar-check text-emerald-500 text-5xl" aria-hidden="true"></i>
+                        <span class="text-3xl font-bold italic">Agendamento automático.</span>
+                    </div>
+                    <div class="flex items-center gap-6">
+                        <i class="fa-solid fa-robot text-emerald-500 text-5xl" aria-hidden="true"></i>
+                        <span class="text-3xl font-bold italic">Conteúdo gerado por IA.</span>
+                    </div>
+                    <div class="flex items-center gap-6">
+                        <i class="fa-solid fa-shield-alt text-emerald-500 text-5xl" aria-hidden="true"></i>
+                        <span class="text-3xl font-bold italic">Segurança em todas as transações.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-biz border-emerald-500/20">
+                <h3 class="mb-10 uppercase tracking-widest">Preços Claros</h3>
+                <div class="space-y-10">
+                    <div class="flex justify-between items-center border-b-4 border-white/10 pb-6">
+                        <span class="text-3xl">Adesão</span>
+                        <span class="text-emerald-500 font-black text-4xl">R$ 300 - 500</span>
+                    </div>
+                    <div class="flex justify-between items-center border-b-4 border-white/10 pb-6">
+                        <span class="text-3xl">Mensal</span>
+                        <span class="text-emerald-500 font-black text-4xl">R$ 50 - 80</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nova Seção: Depoimentos -->
+    <section class="py-32 px-6 max-w-7xl mx-auto text-center">
+        <h2 class="mb-20 uppercase italic underline decoration-emerald-500">O Que Dizem Nossos Clientes</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="card-biz">
+                <p class="mb-6">"Transformou meu negócio!"</p>
+                <span class="text-emerald-500">Cliente A</span>
+            </div>
+            <div class="card-biz">
+                <p class="mb-6">"Fácil e eficiente."</p>
+                <span class="text-emerald-500">Cliente B</span>
+            </div>
+            <div class="card-biz">
+                <p class="mb-6">"Suporte incrível."</p>
+                <span class="text-emerald-500">Cliente C</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-32 px-6 max-w-7xl mx-auto text-center">
+        <h2 class="mb-20 uppercase italic underline decoration-emerald-500">Modelos Disponíveis</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="card-biz">
+                <i class="fa-solid fa-wand-magic-sparkles text-pink-500 text-7xl mb-8 block" aria-hidden="true"></i>
+                <h3 class="mb-6 uppercase">BeautyFlow</h3>
+                <p class="mb-10">Agenda e posts com IA para Salões e Estética.</p>
+                <a href="#" class="btn-massive block border-4 border-pink-500/20 hover:bg-pink-500" aria-label="Testar BeautyFlow">TESTAR</a>
+            </div>
+
+            <div class="card-biz">
+                <i class="fa-solid fa-truck-fast text-orange-500 text-7xl mb-8 block" aria-hidden="true"></i>
+                <h3 class="mb-6 uppercase">COD Flow</h3>
+                <p class="mb-10">Vendas locais com pagamento na entrega.</p>
+                <a href="#" class="btn-massive block border-4 border-orange-500/20 hover:bg-orange-500" aria-label="Testar COD Flow">TESTAR</a>
+            </div>
+
+            <div class="card-biz">
+                <i class="fa-solid fa-clapperboard text-blue-500 text-7xl mb-8 block" aria-hidden="true"></i>
+                <h3 class="mb-6 uppercase">CreativeFlow</h3>
+                <p class="mb-10">Briefings e Roteiros para Criativos.</p>
+                <a href="#" class="btn-massive block border-4 border-blue-500/20 hover:bg-blue-500" aria-label="Testar CreativeFlow">TESTAR</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="bg-emerald-600 py-32 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="bg-white p-16 md:p-24 rounded-[4rem] text-black shadow-2xl">
+                <h2 class="mb-12 text-center text-black">Solicitar Orçamento</h2>
+                <form class="space-y-10" action="https://formspree.io/f/seu_email" method="POST">
+                    <div>
+                        <label class="label-text mb-4 block">Nome da sua Empresa</label>
+                        <input type="text" name="empresa" class="w-full p-8 bg-gray-100 rounded-3xl border-none text-2xl outline-none focus:ring-8 ring-emerald-200" placeholder="Ex: Salão da Neide" required aria-label="Nome da empresa">
+                    </div>
+                    <div>
+                        <label class="label-text mb-4 block">Seu WhatsApp</label>
+                        <input type="tel" name="whatsapp" class="w-full p-8 bg-gray-100 rounded-3xl border-none text-2xl outline-none focus:ring-8 ring-emerald-200" placeholder="(00) 00000-0000" required aria-label="Seu WhatsApp">
+                    </div>
+                    <button type="submit" class="btn-massive w-full bg-emerald-500 text-white text-3xl py-10 shadow-2xl hover:bg-emerald-400 transition transform hover:scale-105" aria-label="Enviar orçamento">
+                        ENVIAR AGORA
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 text-center text-gray-500">
+        <p class="text-2xl font-bold italic">&copy; 2024 SaaSFlow - Soluções Reais para Pessoas Reais.</p>
+    </footer>
+
+</body>
+</html>
