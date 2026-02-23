@@ -2,19 +2,36 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LP's Design & Desenvolvimento Digital</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap"
+    rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body { font-family: 'Inter', sans-serif; background: #0f0f0f; color: #f5f5f5; scroll-behavior: smooth; }
-    .serif { font-family: 'Playfair Display', serif; }
-    .gradient-text { background: linear-gradient(90deg, #c084fc, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .card-glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0f0f0f;
+      color: #f5f5f5;
+      scroll-behavior: smooth;
+    }
+    .serif {
+      font-family: 'Playfair Display', serif;
+    }
+    .gradient-text {
+      background: linear-gradient(90deg, #c084fc, #a78bfa);
+      -webkit-background-clip: text;
+      background-clip: text; /* Adicionado para compatibilidade padrão */
+      -webkit-text-fill-color: transparent;
+    }
+    .card-glass {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
   </style>
 </head>
 <body class="min-h-screen">
-
   <section class="min-h-screen flex items-center justify-center text-center px-6">
     <div>
       <h1 class="serif text-5xl md:text-7xl font-light tracking-wide leading-tight mb-6">
@@ -25,20 +42,19 @@
         A PARTIR DE <strong class="text-white">R$ 159,90</strong>
       </p>
       <div class="flex flex-col md:flex-row gap-4 justify-center">
-        <a href="#pacotes" class="inline-block bg-white text-black font-semibold text-lg px-10 py-5 rounded-full hover:scale-105 transition">
+        <a href="#pacotes"
+          class="inline-block bg-white text-black font-semibold text-lg px-10 py-5 rounded-full hover:scale-105 transition">
           VER PREÇOS
         </a>
-        <a href="https://wa.me/5521981781428?text=Olá!%20Vi%20seu%20portfolio%20e%20quero%20um%20orçamento!" 
-           class="inline-block bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-semibold text-lg px-10 py-5 rounded-full hover:scale-105 transition">
+        <a href="https://wa.me/5521981781428?text=Olá!%20Vi%20seu%20portfolio%20e%20quero%20um%20orçamento!"
+          class="inline-block bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-semibold text-lg px-10 py-5 rounded-full hover:scale-105 transition">
           FALE CONOSCO →
         </a>
       </div>
     </div>
   </section>
-
   <section class="py-24 px-6 bg-black/40">
     <div class="max-w-5xl mx-auto text-center">
-    
       <div class="grid md:grid-cols-3 gap-10">
         <div class="p-8 card-glass rounded-2xl hover:border-purple-500 transition">
           <h3 class="text-2xl font-semibold mb-4">DESIGN ESTRATÉGICO</h3>
@@ -55,45 +71,52 @@
       </div>
     </div>
   </section>
-
   <section id="portfolio" class="py-24 px-6">
     <div class="max-w-6xl mx-auto text-center">
       <h2 class="serif text-4xl md:text-5xl mb-12">PORTFÓLIO</h2>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
         <!-- SaaSFlow -->
-        <div class="group relative overflow-hidden rounded-2xl aspect-video bg-gradient-to-br from-green-900 to-emerald-700 flex flex-col items-center justify-center p-6 transition hover:scale-[1.02]">
+        <div
+          class="group relative overflow-hidden rounded-2xl aspect-video bg-gradient-to-br from-green-900 to-emerald-700 flex flex-col items-center justify-center p-6 transition hover:scale-[1.02]">
           <h4 class="text-2xl font-bold mb-2">SaaSFlow</h4>
           <p class="text-sm opacity-80 mb-4">Gestao Automatica para Pequenos Empreendedores</p>
           <div class="flex gap-3">
-            <a href="/projetos/saasflow.html" class="text-xs bg-white/20 hover:bg-white/30 px-4 py-2 rounded-full transition" aria-label="Ver SaaSFlow interativo">Ver Site</a>
+            <a href="/projetos/saasflow.html"
+              class="text-xs bg-white/20 hover:bg-white/30 px-4 py-2 rounded-full transition"
+              aria-label="Ver SaaSFlow interativo">Ver Site</a>
           </div>
         </div>
-
         <!-- Amygrafia -->
-        <div class="group relative overflow-hidden rounded-2xl aspect-video bg-gradient-to-br from-zinc-800 to-black border border-white/10 flex flex-col items-center justify-center p-6 transition hover:scale-[1.02]">
+        <div
+          class="group relative overflow-hidden rounded-2xl aspect-video bg-gradient-to-br from-zinc-800 to-black border border-white/10 flex flex-col items-center justify-center p-6 transition hover:scale-[1.02]">
           <h4 class="text-2xl font-bold mb-2 italic serif text-zinc-300">AMYGRAFIA</h4>
           <p class="text-sm opacity-80 mb-4">Fotografia & Roteiros</p>
           <div class="flex gap-3">
-            <a href="/projetos/amygrafia.html" class="text-xs bg-white/20 hover:bg-white/30 px-4 py-2 rounded-full transition" aria-label="Ver Amygrafia interativo">Ver Site</a>
-            <a href="/projetos/amygrafia-v2.html" class="text-xs bg-white/15 hover:bg-white/25 px-4 py-2 rounded-full transition" aria-label="Ver Amygrafia V2">V2</a>
+            <a href="/projetos/amygrafia.html"
+              class="text-xs bg-white/20 hover:bg-white/30 px-4 py-2 rounded-full transition"
+              aria-label="Ver Amygrafia interativo">Ver Site</a>
+            <a href="/projetos/amygrafia-v2.html"
+              class="text-xs bg-white/15 hover:bg-white/25 px-4 py-2 rounded-full transition"
+              aria-label="Ver Amygrafia V2">V2</a>
           </div>
         </div>
-
         <!-- Para Artistas -->
-        <div class="group relative overflow-hidden rounded-2xl aspect-video bg-gradient-to-br from-yellow-500 to-orange-600 flex flex-col items-center justify-center p-6 transition hover:scale-[1.02] text-black">
+        <div
+          class="group relative overflow-hidden rounded-2xl aspect-video bg-gradient-to-br from-yellow-500 to-orange-600 flex flex-col items-center justify-center p-6 transition hover:scale-[1.02] text-black">
           <h4 class="text-2xl font-bold mb-2">PARA ARTISTAS</h4>
           <p class="text-sm font-bold opacity-90 mb-4">Venda de Ingressos & Eventos</p>
           <div class="flex gap-3">
-            <a href="/projetos/para-artistas-v2.html" class="text-xs bg-black/20 hover:bg-black/30 px-4 py-2 rounded-full transition" aria-label="Ver Para Artistas interativo">Ver Site</a>
-            <a href="/projetos/para-artistas-v1.html" class="text-xs bg-black/15 hover:bg-black/25 px-4 py-2 rounded-full transition" aria-label="Ver Para Artistas V1">V1</a>
+            <a href="/projetos/para-artistas-v2.html"
+              class="text-xs bg-black/20 hover:bg-black/30 px-4 py-2 rounded-full transition"
+              aria-label="Ver Para Artistas interativo">Ver Site</a>
+            <a href="/projetos/para-artistas-v1.html"
+              class="text-xs bg-black/15 hover:bg-black/25 px-4 py-2 rounded-full transition"
+              aria-label="Ver Para Artistas V1">V1</a>
           </div>
         </div>
-
       </div>
     </div>
   </section>
-
   <section id="pacotes" class="py-24 px-6 bg-black/40">
     <div class="max-w-5xl mx-auto">
       <div class="grid md:grid-cols-3 gap-8">
@@ -106,8 +129,11 @@
             <li>✓ Entrega em 5 dias</li>
           </ul>
         </div>
-        <div class="p-8 bg-gradient-to-b from-purple-900/30 to-transparent rounded-2xl border border-purple-600 relative scale-105 shadow-2xl">
-          <span class="absolute -top-3 right-6 bg-purple-600 text-white px-4 py-1 rounded-full text-xs font-bold uppercase">Mais Popular</span>
+        <div
+          class="p-8 bg-gradient-to-b from-purple-900/30 to-transparent rounded-2xl border border-purple-600 relative scale-105 shadow-2xl">
+          <span
+            class="absolute -top-3 right-6 bg-purple-600 text-white px-4 py-1 rounded-full text-xs font-bold uppercase">Mais
+            Popular</span>
           <h3 class="text-xl font-bold mb-2 text-white">PROFISSIONAL</h3>
           <p class="text-4xl font-bold text-purple-400 mb-6">R$ 299,90</p>
           <ul class="space-y-3 text-gray-200 text-sm">
@@ -128,15 +154,13 @@
       </div>
     </div>
   </section>
-
   <section class="py-32 px-6 text-center">
     <h2 class="serif text-5xl md:text-6xl mb-8">PRONTO?</h2>
-    <a href="https://wa.me/5521981781428?text=Quero%20iniciar%20meu%20projeto%20de%20Landing%20Page!" 
-       class="inline-block bg-purple-600 text-white font-bold text-xl px-16 py-8 rounded-full hover:scale-105 transition">
-       BRIEFING GRÁTIS →
+    <a href="https://wa.me/5521981781428?text=Quero%20iniciar%20meu%20projeto%20de%20Landing%20Page!"
+      class="inline-block bg-purple-600 text-white font-bold text-xl px-16 py-8 rounded-full hover:scale-105 transition">
+      BRIEFING GRÁTIS →
     </a>
   </section>
-
   <footer class="py-12 text-center text-gray-600 border-t border-gray-900">
     © 2026 · LP's Design & Desenvolvimento Digital
   </footer>
